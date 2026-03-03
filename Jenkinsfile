@@ -1,10 +1,10 @@
 pipeline {
-    agent { label 'AGENT-1' }
+    label 'AGENT-1'
         stages{
-            stage(build){
+            stage("build"){
                 echo "this is buil stage"
             }
-            stage(test){
+            stage("test"){
                 echo "this is test stage"
             }
 
