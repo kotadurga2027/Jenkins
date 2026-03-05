@@ -17,6 +17,7 @@ pipeline {
                     echo "this is build stage"
                     script {
                         sh 'printenv'
+                        }
                     }
                 }
             stage ('deploy') {
@@ -32,10 +33,9 @@ pipeline {
                 }       
                     }
                 }
-            }
+            
 
            }
-        }
         post {
             always {
                 echo "This pipeline status will get here"
@@ -46,7 +46,7 @@ pipeline {
             failure {
                 echo "pipeline exection failed"
             }
-
         }
+}
     
 
