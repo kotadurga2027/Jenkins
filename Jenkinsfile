@@ -7,20 +7,20 @@ pipeline {
         choice(name: 'ENVIRONMENT', choices: ['dev', 'qa', 'prod'], description: 'Select deployment environment')
         }
         stages{
-            stage ("checkout"){
-                step{
+            stage ('checkout') {
+                steps {
                     echo "this is checkout stage"
                 }
            }
-            stage ("build") {
-                step{
+            stage ('build') {
+                steps {
                     echo "this is build stage"
                     script {
                         sh 'printenv'
                     }
                 }
-            stage ("deploy"){
-                step {
+            stage ('deploy') {
+                steps {
                     echo "this is deploy stage"
                     script {
                         if (environment == "prod") {
