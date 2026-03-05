@@ -6,7 +6,7 @@ pipeline {
             ROLE = 'Devops Engineer'
         }
         parameters {
-            choice(name: 'ENVIRONMENT', choices: ['dev','qa','prod'], decsription: 'select dployment environment')
+            choice(name: 'ENVIRONMENT', choices: ['dev','qa','prod'], description: 'select dployment environment')
         }
         stages{
             stage ('checkout'){
