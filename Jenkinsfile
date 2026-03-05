@@ -40,7 +40,7 @@ pipeline {
             always {
                 echo "This pipeline status will get here"
             }
-            sucess {
+            success {
                 echo "pipeline executed sucessfully"
             }
             failure {
