@@ -10,8 +10,8 @@ pipeline {
             stage ('checkout') {
                 steps {
                     echo "this is checkout stage"
-                }
-           }
+                    }
+                } 
             stage ('build') {
                 steps {
                     echo "this is build stage"
