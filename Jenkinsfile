@@ -26,8 +26,8 @@ pipeline {
                 steps{
                     echo "this is deploy stage"
                     script{
-                        if (environment == "dev"){
-                            echo "Deploying to Dev
+                        if (environment == "dev") {
+                            echo "Deploying to Dev"
                         } 
                         else {
                             echo "deploying in other env"
