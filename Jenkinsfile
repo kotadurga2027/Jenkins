@@ -54,8 +54,7 @@ pipeline {
                     string(name: 'PERSON', defaultValue: 'Mr kotadurga', description: 'Who should I say hello to?')
                 }
             }
-            steps {
-                echo "Hello, ${PERSON}, nice to meet you."
+           
             }
                 steps{
                     echo "this is deploy stage"
