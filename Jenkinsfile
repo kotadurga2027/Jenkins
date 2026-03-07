@@ -28,7 +28,6 @@ pipeline {
                     echo "this is build stage"
                     script{
                         sh 'printenv'
-                        sleep 10
                     }
                 }
             }
