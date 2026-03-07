@@ -1,5 +1,5 @@
 pipeline {
-    agent {lable 'SERVER-1'}
+    agent any
        /*  environment {
              appVersion = 
 
