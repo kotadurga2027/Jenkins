@@ -33,29 +33,27 @@ pipeline {
                 }
             }
             stage('Example') {
-            steps {
-                echo "Hello ${params.PERSON}"
+                steps {
+                    echo "Hello ${params.PERSON}"
 
-                echo "Biography: ${params.BIOGRAPHY}"
+                    echo "Biography: ${params.BIOGRAPHY}"
 
-                echo "Toggle: ${params.TOGGLE}"
+                    echo "Toggle: ${params.TOGGLE}"
 
-                echo "Choice: ${params.CHOICE}"
+                    echo "Choice: ${params.CHOICE}"
 
-                echo "Password: ${params.PASSWORD}"
+                    echo "Password: ${params.PASSWORD}"
                 }
             }
-            stage ('deploy'){
+            stage ('deploy') {
                 input {
                 message "Should we continue?"
                 ok "Yes, we should."
                 submitter "alice,bob"
                 parameters {
                     string(name: 'PERSON', defaultValue: 'Mr kotadurga', description: 'Who should I say hello to?')
+                    }
                 }
-            }
-           
-            }
                 steps{
                     echo "this is deploy stage"
                     script{
@@ -82,6 +80,7 @@ pipeline {
             echo "pipeline execution is failed"
         }
     }
+}
 
 
 
