@@ -13,6 +13,11 @@ pipeline {
             stage ('build') {
                 steps{
                     script {
+                        '''
+                        print "hello this is build stage"
+                        echo 'we will go to write pipeline for catalogue'
+                        
+                        '''
 
                     }
 
@@ -22,6 +27,11 @@ pipeline {
             stage {
                 steps ('test') {
                     script {
+                        '''
+                        print "hello this is test stage"
+                        echo 'we will go to write pipeline for catalogue'
+
+                        '''
 
                     }
 
@@ -31,6 +41,11 @@ pipeline {
             stage {
                 steps ('deploy') {
                     script {
+                        '''
+                        print "hello this is deploy stage"
+                        echo 'we will go to write pipeline for catalogue'
+
+                        '''
 
                     }
 
